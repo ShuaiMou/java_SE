@@ -13,11 +13,15 @@ import java.io.OutputStream;
 public class TestObjectStream {
 	private static void objectOutStream(){
 		TestObjectStreamStudent student = new TestObjectStreamStudent("saul", "male", 18);
+		TestObjectStreamStudent student1 = new TestObjectStreamStudent("alex", "male", 19);
+		TestObjectStreamStudent[] array = new TestObjectStreamStudent[10];
+		array[0] = student;
+		array[1] = student1;
 		File file = new File("/Users/moushuai/desktop/student.txt");
 		try {
 			OutputStream os = new FileOutputStream(file);
 			ObjectOutputStream ois = new ObjectOutputStream(os);
-			ois.writeObject(student);
+			ois.writeObject(array);
 			ois.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -31,7 +35,9 @@ public class TestObjectStream {
 		try {
 			InputStream os = new FileInputStream(file);
 			ObjectInputStream ois = new ObjectInputStream(os);
-			System.out.println(ois.readObject());
+			TestObjectStreamStudent[] arry = (TestObjectStreamStudent[]) ois.readObject();
+			System.out.println(arry[0].getAge());
+			System.out.println(arry[1]);
 			ois.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -43,7 +49,7 @@ public class TestObjectStream {
 	}
 	
 	public static void main(String[] args) {
-		objectOutStream();
+		//objectOutStream();
 		objectInStream();
 	}
 }

@@ -7,6 +7,8 @@ package cn.saul.lombok;
 import java.util.Date;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 测试lombok
@@ -15,7 +17,8 @@ import lombok.Data;
  * 2019-05-06
  *
  */
-@Data
+@Setter
+@Getter
 public class Car {
 	
 	private String name;
@@ -23,5 +26,5 @@ public class Car {
 	private String model;
 	
 	private Date produceDate;
-
+	
 }
