@@ -1,8 +1,6 @@
 package cn.saul.exception;
 
 import java.util.Date;
-
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -32,14 +30,11 @@ public class Car {
 	public static void main(String[] args) {
 		Car car = new Car();
 		car.setAge(19);
-		int flag = 1;
 		try {
 			if (car.caculateAge(18)) {
-				flag = -1;
 			}
 		} catch (InvalidMoveException e) {
 			System.out.printf("invalid remove %s",e.getMessage());
-			flag = 1;
 		}
 	}
 	

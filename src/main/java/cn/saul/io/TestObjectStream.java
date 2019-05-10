@@ -49,7 +49,7 @@ public class TestObjectStream {
 	}
 	
 	public static void main(String[] args) {
-		//objectOutStream();
+		objectOutStream();
 		objectInStream();
 	}
 }

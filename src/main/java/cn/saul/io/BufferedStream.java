@@ -85,9 +85,9 @@ public class BufferedStream {
 		}
 	}
 	public static void main(String[] args) {
-		//byteIn();
+		byteIn();
 		charOut();
 		charIn();
-		//byteOut();
+		byteOut();
 	}
 }

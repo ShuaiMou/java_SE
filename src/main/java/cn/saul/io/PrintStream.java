@@ -35,7 +35,7 @@ public class PrintStream {
 	}
 	
 	public static void main(String[] args) {
-		//bytePrint();
+		bytePrint();
 		charPrint();
 	}
 }
