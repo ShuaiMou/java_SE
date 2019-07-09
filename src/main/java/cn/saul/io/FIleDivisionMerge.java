@@ -12,6 +12,7 @@ import java.io.SequenceInputStream;
 import java.util.Enumeration;
 import java.util.Vector;
 
+
 public class FIleDivisionMerge {
 	/**
 	 * 文件的分割
