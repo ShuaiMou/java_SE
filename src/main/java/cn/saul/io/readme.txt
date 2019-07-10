@@ -146,3 +146,30 @@ io流涉及：
 		2、在网络中，客户端与服务端编码不统一（WEB开发中出现的乱码情况）
 	
 16、New IO
+	Path接口
+		1、Path表示的是一个目录名序列，其后还可以跟着一个文件名，路径中第一个部件是根部件时就是绝对路径，例如 / 或 C:\ ，而允许访问的根部件取决于文件系统；
+		2、以根部件开始的路径是绝对路径，否则就是相对路径；
+		3、静态的Paths.get方法接受一个或多个字符串，字符串之间自动使用默认文件系统的路径分隔符连接起来（Unix是 /，Windows是 \ ），这就解决了跨平台的问题，接着解析连接起来的结果，如果不是合法路径就抛出InvalidPathException异常，否则就返回一个Path对象；
+	Files工具类
+		1、读写文件
+			static path write(Path path, byte[] bytes, OpenOption... options)  写入文件
+			static byte[] readAllBytes(Path path)  读取文件中的所有字节。  
+		
+		2、复制、剪切、删除
+			static path copy(Path source, Path target, CopyOption... options)
+			static path move(Path source, Path target, CopyOption... options)	
+			static void delete(Path path) //如果path不存在文件将抛出异常，此时调用下面的比较好
+			static boolean deleteIfExists(Path path) 
+	3、创建文件和目录
+		//创建新目录，除了最后一个部件，其他必须是已存在的
+		Files.createDirectory(path); 
+		//创建路径中的中间目录，能创建不存在的中间部件
+		Files.createDirectories(path);
+		//创建一个空文件，检查文件存在，如果已存在则抛出异常而检查文件存在是原子性的，
+		//因此在此过程中无法执行文件创建操作
+		Files.createFile(path);
+		//添加前/后缀创建临时文件或临时目录
+		Path newPath = Files.createTempFile(dir, prefix, suffix);
+		Path newPath = Files.createTempDirectory(dir, prefix);
+	
+	
