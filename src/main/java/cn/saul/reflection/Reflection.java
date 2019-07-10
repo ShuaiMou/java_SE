@@ -6,6 +6,7 @@ public class Reflection {
 	/**
 	 * 用得到的Class对象创建对应实例
 	 */
+	@SuppressWarnings("unchecked")
 	@Test
 	public void test2(){
 		Class<Car> class3 = null;
