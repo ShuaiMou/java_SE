@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<people>
+	<person personId="1001">
+		<name>XiaoLin</name>
+		<address>2001/668 Bourke ST</address>
+		<tel>18050041547</tel>
+		<email>xiaolin@gamil.com</email>
+	</person>
+	<person personId="1002">
+		<name>Saul</name>
+		<address>2003/669 Swaston ST</address>
+		<tel>4208115463e</tel>
+		<email>saul@gamil.com</email>
+	</person>
+</people>
