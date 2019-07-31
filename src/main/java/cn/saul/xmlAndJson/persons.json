@@ -1,0 +1,16 @@
+[
+	{
+		"personId":"1101",
+		"name":"jack",
+		"address":"88/bourke st.",
+		"tel":"110",
+		"email":"jack@gamil.com"
+	},
+	{
+		"personId":"1102",
+		"name":"marray",
+		"address":"334/william st.",
+		"tel":"112",
+		"email":"marray@gmail.com"
+	}
+]

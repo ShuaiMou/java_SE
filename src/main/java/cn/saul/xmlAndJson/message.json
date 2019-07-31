@@ -1,0 +1,20 @@
+[
+	{
+		"id":2201,
+		"text":"create a json text",
+		"geo":null,
+		"user": {
+			"name": "saul",
+			"followers_count": 42
+		}
+	},
+	{
+		"id": 2202,
+		"text": "resolve the json file",
+		"geo": [20.3453, -128.8489],
+		"user": {
+			"name": "eric",
+			"followers_count": 99
+		}
+	}
+]
