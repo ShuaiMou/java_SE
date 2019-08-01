@@ -6,10 +6,12 @@ import org.junit.Test;
 public class MyAnnotationTest {
 	
 	private Cat cat;
-	
+	//反射处理注解
 	@Test
 	public void test() {
 		Class<?> class1 = Cat.class;
+		
+		//获取类上应用的所有注解
 		Annotation[] annotations = class1.getAnnotations();
 		MyAnnotation myAnnotation = null;
 		for (int i = 0; i < annotations.length; i++) {
@@ -18,6 +20,7 @@ public class MyAnnotationTest {
 				
 			}
 		}
+		//获取注解上的变量
 		String name = myAnnotation.name();
 		int age = myAnnotation.age();
 		Color color = myAnnotation.color();

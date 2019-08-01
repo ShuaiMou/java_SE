@@ -31,7 +31,6 @@ public class Singleton implements Serializable{
 				}
 			}
 		}
-		
 		return singleton;
 	}
 }

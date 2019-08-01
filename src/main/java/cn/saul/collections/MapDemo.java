@@ -18,6 +18,7 @@ import java.util.TreeMap;
  *- 1.键值对存储一组对象
  *- 2.key不能重复（唯一），value可以重复。
  *- 3.具体的实现类：HashMap，TreeMap，Hashtable， LinkedHashMap
+ * 
  */
 public class MapDemo {
 	/**

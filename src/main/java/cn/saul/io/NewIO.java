@@ -1,13 +1,12 @@
 package cn.saul.io;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class NewIO {
 	public static void main(String[] args) throws IOException {
-		File file = new File("/Users/moushuai/desktop/testio/test.avi");
+		//File file = new File("/Users/moushuai/desktop/testio/test.avi");
 		/*
 		//path
 		Path p1 = Paths.get("/Users/moushuai/desktop/testio", "test.avi");
