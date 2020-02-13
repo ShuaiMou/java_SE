@@ -116,7 +116,6 @@ class producer implements Runnable{
 		this.food = food;
 	}
 	
-	@Override
 	public void run() {
 		for (int i = 0; i < 10; i++) {
 			if ( i%2 == 0) {
@@ -139,7 +138,6 @@ class customer implements Runnable{
 		 this.food = food;
 	}
 
-	@Override
 	public void run() {
 		for (int i = 0; i < 10; i++) {
 			food.get();
