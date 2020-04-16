@@ -40,6 +40,7 @@ public class SetDemo {
 		set.add("XiaoLin");
 		set.add("DaZhuang");
 		set.add("XiaoMing");
+
 		
 		//转换为Array来遍历
 		String[] names = set.toArray(new String[] {});
@@ -77,7 +78,6 @@ public class SetDemo {
 		treeSet.add(c2);
 		treeSet.add(c4);
 		treeSet.add(c3);
-		
 		for(Cat cat : treeSet) {
 			System.out.println(cat);
 		}

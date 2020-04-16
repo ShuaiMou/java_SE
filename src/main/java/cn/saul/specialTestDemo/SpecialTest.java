@@ -8,7 +8,12 @@ import org.junit.Test;
  * @Description:
  */
 public class SpecialTest {
-
+    /***
+     * @Author Saul
+     * @Description  TODO: 测试Integer 用valueOf时的缓存-128 ～ 127 （包含首尾）
+     *                    Long也一样, Byte也有缓存
+     * @Date 11:13 PM 13/2/20
+     */
     @Test
     public void test1(){
         Integer a = Integer.valueOf(128);
@@ -28,10 +33,5 @@ public class SpecialTest {
         System.out.println(a == g);
         System.out.println(e == g);
         System.out.println(a == e);
-
-
-
-
-
     }
 }

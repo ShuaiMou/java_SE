@@ -1,10 +1,9 @@
 package cn.saul.collections;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Vector;
+import javafx.util.Pair;
+
+import java.util.*;
+
 /**
  *  List 接口:
  *  
@@ -105,7 +104,6 @@ public class ListDemo {
 		list.add("xiaolin");
 		list.add("dazhuang");
 		list.add("huanqiang");
-		
 		//for size()遍历
 		System.out.println("-------------for size()遍历-----------");
 		for (int i = 0; i < list.size(); i++) {
@@ -125,13 +123,39 @@ public class ListDemo {
 		Iterator<String> iterator = list.iterator();
 		while(iterator.hasNext()) {
 			System.out.println(iterator.next());
-		}	
+		}
+		Queue<Pair<Integer,Integer>> queue = new LinkedList<>();
+		queue.add(new Pair<>(1,2));
+		Pair pair = queue.poll();
+		Object key = pair.getKey();
+		pair.getValue();
+		Stack<Pair<Integer, Integer>> stack = new Stack<>();
+        Pair pair1 = stack.push(pair);
+        stack.pop();
+
 	}
 	
 	public static void main(String[] args) {
 		//arrayList();
 		//vector();
-		linkedList();
+//		linkedList();
+		List<Integer> list1 = new LinkedList();
+		list1.add(66);
+		list1.add(55);
+		list1.add(44);
+		System.out.println(list1.size());
+		list1.set(1, 88);
+		System.out.println(list1.size());
+		System.out.println(list1.get(1));
+		System.out.println(list1.size());
+		int[] a = new int[10];
+		String b = "cc dd ee";
+		String join = String.join("", b.split(" "));
+		System.out.println("20%");
+		System.out.println("%20");
+		int d = 1^0x11;
+
+		System.out.println((1 & 0) == 1);
 	}
 
 }
